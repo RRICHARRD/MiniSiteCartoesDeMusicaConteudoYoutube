@@ -1,0 +1,196 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap";
+
+:root /*VARIÁVEIS EM CSS, AJUDA A ESCREVER AS CORES MAIS RÁPIDO DEPOIS*/
+{
+    --color-white: white;
+    --color-black: #343837;
+    --color-blue: #03719C;
+    --color-darkBlue: #000133;
+}
+
+*  /*ZERA OS ESPAÇAMENTOS PADRÕES DO USER AGENT*/
+{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body
+{
+    background: var(--color-black);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-white);
+}
+
+header 
+{
+    padding: 32px;
+    border-bottom: 1px solid #C6FCFF;
+    background: rgba(0 , 0, 0, 0.1);
+}
+
+.links 
+{
+    text-align: center; 
+}
+
+.links a /*REFERENCIANDO UMA CLASSE*/
+{
+    color: var(--color-white); /*COLOR SEMPRE MECHEMOS COM TEXTO*/
+    font-size: 18px;
+    line-height: 28px; /*DICA É SEMPRE COLOCAR 10PX A MAIS QUE O FONTE SIZE*/
+    margin: 0 16px; /*ISSO FAZ OS DOIS ELEMENTOS FICAREM COM UM ESPAÇO NO MEIO*/
+    padding-bottom: 3px;
+    text-decoration: none; /*RETIRA A LINHA DE BAIXO DAS PALAVRAS*/
+}
+
+.links a:hover 
+{
+    color: var(--color-blue);
+    transition: color 300ms; 
+}
+
+#wrapper /*SELETOR DE ID*/
+{
+    text-align: center;
+    padding: 32px; /*APLICA ESPAÇÃMENTO AO REDOR DE TODA A IMAGEM*/
+}
+
+#wrapper img 
+{
+    border-radius: 50%; /*ARREDONDANDO A IMAGEM*/
+    border: 5px solid var(--color-darkBlue); 
+    margin-bottom: 32px; /*INSERE UM ESPAÇAMENTO ABAIXO DA IMAGEM, EMPURRA O H1 E AS OUTRAS PARADAS PARA BAIXO*/
+    height: 300px; /*TAMANHO DA IMAGEM PRESENTE NA PÁGINA*/
+}
+
+#wrapper h1
+{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold; /*PESO DA FONTE, MAS TEM QUE TER NA IMPORTAÇÃO*/
+}
+
+#wrapper h2
+{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px; /*SEPAÇÃO ENTRE O H1 E O H2*/
+    opacity: 0.8;
+}
+
+#wrapper p
+{
+    max-width: 500px; /*LARGURA, LIMITAÇÃO, MAS NESSE CASO SAIU DO EIXO POIS FICOU LIMITADO*/
+    margin: 32px auto; /*COM ISSO CONSEGUIMOS FAZER VOLTAR NOVAMENTE PARA O CENTRO DA PÁGINA, E AINDA DÁ UM ESPAÇO DO H2*/
+    font-size: 24px;
+    line-height: 34px; /*REALMENTE NÃO VEJO DIFERENÇA SIGNIFICATIVA NISSO*/
+}
+
+#wrapper p a 
+{
+    text-decoration: none; /*TIRANDO O UNDERCORE DE BAIXO DA PALAVRA*/
+    color: var(--color-blue); 
+}
+
+#wrapper p a:hover
+{
+    color: yellow;
+    transition: color 250ms;
+}
+
+#links-footer a
+{
+    border-bottom: 1px solid var(--color-blue); /*COLOCA UMA BORDA EM BAIXO EM BAIXO DA PALAVRA COM ESSE COR BLUE, O HOVER PEGA DE OUTRA ESCOPO DE BLOCO*/
+}
+
+/*==== CARDS =====*/
+
+.cards
+{
+    max-width: 800px;
+    margin: 0 auto; /*ALINHA AO MEIO DEPOIS DE FAZER ESSE MAX-WIDTH*/
+    display: grid; /*TRANSFORMA EM UMA TABALA, MAS AINDA NÃO MUDA A POSIÇÃO DE NADA*/
+    grid-template-columns: 1fr 1fr 1fr; /*AGORA MUDOU AS POSIÇÕES, EM TRÊS COLUNAS IGUAIS, MAS FICA COLODO, AI PRECISA DESCOLAR*/
+    gap: 20px; /*COLOCA OS ESPAÇO ENTRE OS ELEMENTOS DO GRID*/
+}
+
+.card
+{
+    background-color: #7159;
+}
+
+.card_image-container img
+{
+    width: 100%; /*RESPEITA O LIMITE DO MAX-WIDTH*/
+}
+
+.card_content, 
+.card_info
+{
+    padding: 24px;
+}
+
+.card_info
+{
+    display: grid; /*MOVIMENTA ALGUMA COISA EM EIXO, SERIA ALGO EM LINHA RETA, SEJA PARA CIMA, BAIXO, OU PARA OS DOIS LADOS */
+    grid-template-columns: 1fr 1fr; /*CRIA COMO SE FOSSE UMA TABELA COM 2 "CÉLULAS" IGUAIS*/
+}
+
+.card_price
+{
+    background-color: #7159; /*EXATAMENTE A MESMA COR DE FUNDO*/
+    filter: brightness(100%); /*MESMA COR PORÉM MAIS ESCURO, SEMPRE PEGA ESSE BRILHO*/
+    padding: 5px 20px;
+    border-radius: 20px; /*DEIXA A BORDA DO CARD, QUE POR SINAL FICOU COM AQUELA COLARAÇÃO ALI DE CIMA, MEIO ARREDONDADA NAS LATERAIS*/
+    text-align: center;
+}
+
+
+/*=== MODAL ===*/
+
+.modal-overlay /*COLOCANDO UMA FIGURA DE MODAL*/
+{
+    background-color: rgba(0, 0, 0, 0.8); /*NÃO APERE AINDA*/
+    width :100% ; /*NÃO APERE AINDA*/
+    height: 100%; /*NÃO APERE AINDA*/
+    position: fixed; /*AQUI AINDA NÃO MOSTROU, ERA PARA FICAR FIXADO NA TELA LÁ EM BAIXO, TALVEZ SEJA UM PROBLEA DE FIM DE PÁGINA*/
+    top: 0; /*CHAMEI ELE LÁ PARA CIMA, AGORA ELE COBRIU TUDO*/
+    opacity: 0; /*SUMINGO COMO MODAL OVERLAY, MAS ELE AINDA ESTÁ ALI, SE PASSAR O MOUSE POR CIMA DO X VAI MUDAR O CURSOS*/
+    visibility: hidden; /*AGORA A VISIBILIDADE DELE ESTÁ ESCONDIDA TAMBÉM, OU SEJA, NÃO VAI MUDAR MAIS O CURSOS POIS O MADAL NÃO VAI ESTAR MAIS ALI*/
+}
+
+.modal
+{
+    background-color: white;
+    width: 90%;
+    height: 90%; /*FAZ TER UM ESPAÇAMENTO NO CANTINHO*/
+    margin: 5vh auto; /*DA UM ESPACINHO EM CIMA EM EMBAIXO, DO LADO COLOCA AUTOMÁTICO, ELE SE ADAPTA A POSIÇÃO DA ELA TAMBÉM*/
+    position: relative; /*COMO SE LEVANTASSE PAREDES, AI NO POSITION E RIGHT EMBAIXO NÃO SAI PARA FORA*/
+}
+
+.modal .close-modal
+{
+    color: black; /*A COR PADRÃO É BRANCA PELO VISTO*/
+    position: absolute; /*AGORA POSSO POSICIONAR EM QUALQUER LUGAR DA TELA, MAIS RESPEITA O RELATIVE*/    
+    right: 8px ; /*JOGA O X LÁ PARA O LADO E APLICA UM POUCO DE FORMATAÇÃO*/
+    top: 8px;
+    cursor: pointer; /*TRANSFORMA O MOUSE EM MÃOSINHA, COMO EU TIREI O HREF DO A EU PRECISEI COLOCAR AQUI PARA MODIFICAR O MOUSE*/
+}
+
+/*=== MODAL.ACTIVE ===*/
+
+.modal-overlay.active /*TEM QUE ESTAR JUNTO ASSIM, CASO CONTRÁRIO NÃO PEGA OS ESTILOS, DEVE SER POR CAUSA DO ESPAÇO PARA DEFINIR O OUTRO NOME DA CLASSE, ADICIONO E TIRO ESSA CLASSE ACTIVE COM JAVASCRIPT*/
+{
+    opacity: 1; /*APARECE O MODAL QUANDO ELE ESTIVER ATIVADO, É PARA ISSO QUE SERVE ESSA CLASSA .active*/
+    visibility: visible;
+}
+
+iframe
+{
+    width: 100%;
+    height: 90%; /*PARA NÃO FICAR EM CIMA DO BOTÃOZINHO*/
+    position: absolute;
+    top: 5%; /*AFASTADO DO TOPO*/
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOME DO SITE AQUI</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--IMPORTANDO OS ÍCONES, POR EXEMPLO O ÍCONE DE X-->
+    <link href= rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!--REFERENCIANDO O ARQUIVO CSS styles.css DA MESMA PASTA-->
+</head>
+<body> <!--CAMADA 1-->
+        <header> <!--CAMADA 2--> <!--PARTE SUPERIOR DA PÁGINA, GERALEMENTE AQUELA LINHA PADRÃO DE TODOS OS SITES--> 
+            <div class= "links"> <!--CAMADA 3--> <!--QUER DIZER QUE O QUE FOR ESTILIZADO NO 2 NÃO VAI PEGAR CASO O 3 TENHA SIDO ESTILIZADO TAMBÉM, POR A CAMADA DELE FICA POR CIMA-->
+                <a href="/">Sobre</a>
+                <a href="/">Aulas</a>
+            </div>
+        </header>
+
+        <div id="wrapper">
+            <h1>Alguma coisa</h1> 
+        </div>
+
+        <section class="cards"> <!--ESSA TAG É APENAS PARA SEMÂNTICA, É COMO SE FOSSE UMA DIV-->
+          
+            <div class="card" id="J2X5mJ3HDYE">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/J2X5mJ3HDYE/maxresdefault.jpg" alt="https://www.youtube.com/watch?v=J2X5mJ3HDYE&list=PLrjn34iPokb8sRICHNQe4Hp1ncN7asbEF">
+                </div>
+                <div class="card_content">
+                    <p>Nome da música </p>
+                </div>
+                <div class="card_info">
+                    <p>XX minutos</p>
+                    <p class="card_price">Free</p>
+                </div>
+            </div>
+
+            <div class="card" id="EP625xQIGzs">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/EP625xQIGzs/maxresdefault.jpg" alt="https://www.youtube.com/watch?v=EP625xQIGzs&list=PLrjn34iPokb8sRICHNQe4Hp1ncN7asbEF&index=2">
+                </div>
+                <div class="card_content">
+                    <p>Nome da música </p>
+                </div>
+                <div class="card_info">
+                    <p>XX minutos</p>
+                    <p class="card_price">Free</p>
+                </div>
+            </div>
+
+            <div class="card" id="lD4ZIzosp_c">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/lD4ZIzosp_c/maxresdefault.jpg" alt="https://www.youtube.com/watch?v=lD4ZIzosp_c&list=PLrjn34iPokb8sRICHNQe4Hp1ncN7asbEF&index=3">
+                </div>
+                <div class="card_content">
+                    <p>Nome da música </p>
+                </div>
+                <div class="card_info">
+                    <p>XX minutos</p>
+                    <p class="card_price">Free</p>
+                </div>
+            </div>
+
+            <div class="card" id="VtKbiyyVZks">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/VtKbiyyVZks/maxresdefault.jpg" alt="https://www.youtube.com/watch?v=VtKbiyyVZks&list=PLrjn34iPokb8sRICHNQe4Hp1ncN7asbEF&index=4">
+                </div>
+                <div class="card_content">
+                    <p>Nome da música </p>
+                </div>
+                <div class="card_info">
+                    <p>XX minutos</p>
+                    <p class="card_price">Free</p>
+                </div>
+            </div>
+
+            <div class="card" id="4lXBHD5C8do">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/4lXBHD5C8do/maxresdefault.jpg" alt="https://www.youtube.com/watch?v=4lXBHD5C8do&list=PLrjn34iPokb8sRICHNQe4Hp1ncN7asbEF&index=5">
+                </div>
+                <div class="card_content">
+                    <p>Nome da música </p>
+                </div>
+                <div class="card_info">
+                    <p>XX minutos</p>
+                    <p class="card_price">Free</p>
+                </div>
+            </div>
+
+            <div class="card" id="h18gwLKQf_Q">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/h18gwLKQf_Q/maxresdefault.jpg" alt="https://www.youtube.com/watch?v=h18gwLKQf_Q&list=PLrjn34iPokb8sRICHNQe4Hp1ncN7asbEF&index=7">
+                </div>
+                <div class="card_content">
+                    <p>Nome da música </p>
+                </div>
+                <div class="card_info">
+                    <p>XX minutos</p>
+                    <p class="card_price">Free</p>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="modal-overlay"> <!--active VIRA OUTRA CLASSE-->
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">close</i> <!--NOME DO ÍCONE, PRECISA ESTAR ESCRITO DESSA FORMA-->
+                </a>
+
+                <div class="modal-content">
+                    <!--INSERI O VÍDEO AQUI-->
+                    <iframe src="" frameborder="0"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts.js"> </script> <!--CHAMANDO O ARQUIVO PARA TROCAR A CLASSE DO MODAL-->
+</body>
+</html> 
